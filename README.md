@@ -34,7 +34,7 @@ To install:
 @nestjs/passport passport-local
 
 1. Enter to postman and pass this route: localhost:3000/login using the http method POST
-    Then, in the raw section you must provide the corresponding account like: 
+    Then, in the body/raw section you must provide the corresponding account like: 
     {
         "username": "sromero",
         "password": "123456"
