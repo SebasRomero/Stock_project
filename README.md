@@ -22,52 +22,24 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+The users saved in memory are in './users/users.service.ts', to add or change any user manually.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+At './auth/auth.module.ts' is where the secret is placed and that must match with the secret in
+'./auth/jwt.strategy.ts'
 
-## Installation
+To install: 
+@nestjs/common
+@nestjs/jwt
+@nestjs/passport
+@nestjs/passport passport-local
 
-```bash
-$ npm install
-```
+1. Enter to postman and pass this route: localhost:3000/login using the http method POST
+    Then, in the raw section you must provide the corresponding account like: 
+    {
+        "username": "sromero",
+        "password": "123456"
+    }
+2. You will get an access token, copy it and then go to the authorization page and select 'bearer token' and put it there.
 
-## Running the app
+3. Finally, you have to change the route to 'protected' and the http method will be GET.
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
